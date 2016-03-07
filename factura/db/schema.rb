@@ -11,17 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160304214631) do
+ActiveRecord::Schema.define(version: 20160307190405) do
 
-  create_table "bills", force: :cascade do |t|
+  create_table "Test_table", force: :cascade do |t|
+    t.string  "name"
+    t.integer "code"
+    t.text    "description"
+  end
+
+  create_table "facturas", force: :cascade do |t|
     t.string   "codigo"
     t.datetime "fecha"
     t.float    "valor"
-    t.string   "dependencia"
+    t.string   "departamento"
     t.string   "beneficiario"
     t.string   "depositante"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "test_column"
   end
 
 end
